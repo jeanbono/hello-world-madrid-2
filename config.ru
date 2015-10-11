@@ -25,7 +25,7 @@ module MyApp
   end
 
   class Opportunity < ActiveRecord::Base
-    set_table_name 'salesforce.Opportunity'
+    self.table_name = 'salesforce.Opportunity'
   end
 end
 

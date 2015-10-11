@@ -15,9 +15,9 @@ module MyApp
     resource :opportunities do
       post do
         opp = MyApp::Opportunity.new({
-          :Name => 'Test',
-          :Description => 'This is an opportunity',
-          :Amount => 123
+          :name => 'Test',
+          :description => 'This is an opportunity',
+          :amount => 123
         })
         {:success => opp.save}
       end

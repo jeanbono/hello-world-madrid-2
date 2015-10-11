@@ -17,7 +17,9 @@ module MyApp
         opp = MyApp::Opportunity.new({
           :name => 'Test',
           :description => 'This is an opportunity',
-          :amount => 123
+          :amount => 123,
+          :stagename => 'Won',
+          :closedate => '2015-10-11'
         })
         {:success => opp.save}
       end

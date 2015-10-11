@@ -12,19 +12,20 @@ module MyApp
       {:hello => 'World'}
     end
 
-    resource :posts do
+    resource :opportunities do
       post do
-        post = MyApp::Post.new({
-          :title => 'Test',
-          :body => 'This is a post'
+        opp = MyApp::Opportunity.new({
+          :Name => 'Test',
+          :Description => 'This is an opportunity',
+          :Amount => 123
         })
-        {:success => post.save}
+        {:success => opp.save}
       end
     end
   end
 
-  class Post < ActiveRecord::Base
-
+  class Opportunity < ActiveRecord::Base
+    set_table_name 'salesforce.Opportunity'
   end
 end
 
